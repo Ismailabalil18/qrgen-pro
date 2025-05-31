@@ -31,7 +31,7 @@ function QRGenerator() {
     }
     try {
       setLoading(true);
-      const response = await fetch('/api/generate', {
+      const response = await fetch('/.netlify/functions/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url, color, size }),
